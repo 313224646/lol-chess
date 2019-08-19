@@ -15,4 +15,9 @@ this.$forage.setItem('beforeDate', date) // 获取数据
 
 import Vue from 'vue'
 import localforage from 'localforage'
+
+localforage.config({
+  name: 'wsh website data'
+})
+
 Vue.prototype.$local = localforage
