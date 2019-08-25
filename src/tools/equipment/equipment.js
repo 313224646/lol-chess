@@ -38,8 +38,8 @@ class Synthesis extends Equipment {
   }
 
   decomposition () { // 装备分解
-    const basis = this.way.split('+').map(item => {
-      return new Basis(item)
+    return this.way.split('+').map(numbering => {
+      return new Basis(numbering)
     })
   }
 }

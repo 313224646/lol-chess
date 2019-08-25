@@ -4,7 +4,6 @@ import router from './router'
 
 // plugins
 import '@/plugins/axios'
-import '@/plugins/localforage'
 
 Vue.config.productionTip = false
 

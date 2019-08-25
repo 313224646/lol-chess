@@ -1,51 +1,30 @@
 <template>
-  <div>
-    <div class="equipment">
-      <div class="base">
-        <div class="base-item" v-for="(item, index) in base" :key="index">
-          <img :src="item.imagesUrl" @click="equipmentClick(item)"/>
-        </div>
-      </div>
-      <div class="base">
-        <div class="base-item" v-for="item in 8" :key="item">
-          <img :src="selectBase.imagesUrl" />
-        </div>
-      </div>
-      <div class="synthesis">
-        <transition-group name="van-slide-right">
-          <div class="synthesis-item" v-for="(item, index) in baseToSynthesisAll" :key="index">
-            <img :src="item.imagesUrl"/>
-          </div>
-        </transition-group>
-      </div>
-    </div>
+  <div class="index">
+    <van-tabs v-model="active">
+      <van-tab title="装备合成"><index-synthesis /></van-tab>
+      <van-tab title="装备分解"><index-decomposition /></van-tab>
+      <van-tab title="阵容联想"></van-tab>
+    </van-tabs>
   </div>
 </template>
 
 <script>
-import { getBase, getSynthesis } from '@/tools/equipment/equipment'
-import { Button } from 'vant'
+import { Tab, Tabs } from 'vant'
 export default {
   name: 'index',
   components: {
-    [Button.name]: Button
+    indexSynthesis: () => import('@/components/synthesis'),
+    indexDecomposition: () => import('@/components/decomposition'),
+    [Tabs.name]: Tabs,
+    [Tab.name]: Tab
   },
   data () {
     return {
-      base: getBase(),
-      synthesis: getSynthesis(),
-      baseToSynthesisAll: [],
-      selectBase: {}
+      active: 1
     }
   },
   computed: {},
-  methods: {
-    equipmentClick (targer) {
-      this.selectBase = targer
-      this.baseToSynthesisAll = targer.synthesisAll()
-      
-    }
-  },
+  methods: {},
   created () {},
   mounted () {},
   activated () {}
@@ -53,25 +32,8 @@ export default {
 </script>
 
 <style scoped lang="stylus">
-.equipment
-  display flex
-  justify-content space-between
-  background-color #684e35
-  .base
-  .synthesis
-    display flex
-    justify-content center
-    flex-flow column nowrap
-    height 100vh
-    .base-item
-    .synthesis-item
-      width calc(100vh / 8)
-      height calc(100vh / 8)
-      padding 8px
-      font-size 0
-      img
-        width 100%
-        height 100%
-        border-radius 50%
-        overflow hidden
+.index
+  background-color #90966e
+  height 100vh
+  overflow hidden
 </style>
