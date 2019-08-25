@@ -1,37 +1,55 @@
-const BASE = require('./base.json') // 基础装备
+const BASIS = require('./basis.json') // 基础装备
 const SYNTHESIS = require('./synthesis.json') // 合成装备
-const ALL = BASE.concat(SYNTHESIS)
+const ALL = BASIS.concat(SYNTHESIS)
 
 class Equipment {
-  constructor(name) {
-    const info = findEquipment(name)
-    this.name = info.name
-    this.numbering = info.numbering
-    this.imagesUrl = `https://game.gtimg.cn/images/lol/tft/items/${this.numbering}.png`,
-    this.desc = info.desc
+  constructor(name, numbering, desc) {
+    this.name = name
+    this.numbering = numbering
+    this.imagesUrl = `https://game.gtimg.cn/images/lol/tft/items/${numbering}.png`,
+    this.desc = desc
   }
 }
 
-class EquipmentBasis extends Equipment {
-  constructor(name) {
-    super(name)
+// 基础装备类
+class Basis extends Equipment {
+  constructor(numbering) {
+    const info = findEquipment(numbering)
+    super(info.name, info.numbering, info.desc)
   }
-  synthesisOne (name) { // 合成单个装备
-    const equipment = findEquipment(name)
-    return new Equipment(synthesis(this.numbering, equipment.numbering).name)
+  synthesisOne (numbering) { // 合成单个装备
+    const equipment = findEquipment(numbering)
+    return new Synthesis(synthesis(this.numbering, equipment.numbering).name)
   }
   synthesisAll () { // 单个装备能合成的对应装备
-    const equipment = findEquipment(this.name)
-    return BASE.map(item => {
-      return new Equipment(synthesis(equipment.numbering, item.numbering).name)
+    const equipment = findEquipment(this.numbering)
+    return BASIS.map(item => {
+      return new Synthesis(synthesis(equipment.numbering, item.numbering).numbering)
     })
   }
 }
 
+// 合成装备类
+class Synthesis extends Equipment {
+  constructor(numbering) {
+    const info = findEquipment(numbering)
+    super(info.name, info.numbering, info.desc)
+    this.way = info.way
+  }
+
+  decomposition () { // 装备分解
+    const basis = this.way.split('+').map(item => {
+      return new Basis(item)
+    })
+  }
+}
+
+
+
 // 根据名字查找一个装备
-function findEquipment (name) {
+function findEquipment (numbering) {
   const result = ALL.find(item => {
-    return item.name === name
+    return item.numbering === numbering
   })
   if (result) {
     return result
@@ -55,15 +73,15 @@ function synthesis (numbering1, numbering2) {
 
 // 获取基本装备
 function getBase () {
-  return BASE.map(item => {
-    return new EquipmentBasis(item.name)
+  return BASIS.map(item => {
+    return new Basis(item.numbering)
   })
 }
 
 // 获取合成装备
 function getSynthesis () {
   return SYNTHESIS.map(item => {
-    return new Equipment(item.name)
+    return new Synthesis(item.numbering)
   })
 }
 
