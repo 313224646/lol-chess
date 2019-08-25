@@ -1,0 +1,450 @@
+[
+  {
+    "name": "虚空行者",
+    "race": "虚空",
+    "profession": "法师",
+    "price": "1",
+    "numbering": "38",
+    "avatar": "https://game.gtimg.cn/images/lol/tft/cham-icons/38.png"
+  },
+  {
+    "name": "崔斯特",
+    "race": "海盗",
+    "profession": "法师",
+    "price": "2",
+    "numbering": "4",
+    "avatar": "https://game.gtimg.cn/images/lol/tft/cham-icons/4.png"
+  },
+  {
+    "name": "仙灵女巫",
+    "race": "约德尔人",
+    "profession": "法师",
+    "price": "2",
+    "numbering": "117",
+    "avatar": "https://game.gtimg.cn/images/lol/tft/cham-icons/117.png"
+  },
+  {
+    "name": "九尾妖狐",
+    "race": "狂野",
+    "profession": "法师",
+    "price": "2",
+    "numbering": "103",
+    "avatar": "https://game.gtimg.cn/images/lol/tft/cham-icons/103.png"
+  },
+  {
+    "name": "邪恶小法师",
+    "race": "约德尔人",
+    "profession": "法师",
+    "price": "3",
+    "numbering": "45",
+    "avatar": "https://game.gtimg.cn/images/lol/tft/cham-icons/45.png"
+  },
+  {
+    "name": "堕落天使",
+    "race": "恶魔",
+    "profession": "法师",
+    "price": "3",
+    "numbering": "25",
+    "avatar": "https://game.gtimg.cn/images/lol/tft/cham-icons/25.png"
+  },
+  {
+    "name": "铸星龙王",
+    "race": "龙",
+    "profession": "法师",
+    "price": "4",
+    "numbering": "136",
+    "avatar": "https://game.gtimg.cn/images/lol/tft/cham-icons/136.png"
+  },
+  {
+    "name": "死亡颂唱者",
+    "race": "暗影",
+    "profession": "法师",
+    "price": "5",
+    "numbering": "30",
+    "avatar": "https://game.gtimg.cn/images/lol/tft/cham-icons/30.png"
+  },
+  {
+    "name": "虚空掠夺者",
+    "race": "虚空",
+    "profession": "刺客",
+    "price": "1",
+    "numbering": "121",
+    "avatar": "https://game.gtimg.cn/images/lol/tft/cham-icons/121.png"
+  },
+  {
+    "name": "影流之主",
+    "race": "忍者",
+    "profession": "刺客",
+    "price": "2",
+    "numbering": "238",
+    "avatar": "https://game.gtimg.cn/images/lol/tft/cham-icons/238.png"
+  },
+  {
+    "name": "血港魅影",
+    "race": "海盗",
+    "profession": "刺客",
+    "price": "2",
+    "numbering": "555",
+    "avatar": "https://game.gtimg.cn/images/lol/tft/cham-icons/555.png"
+  },
+  {
+    "name": "傲之追猎者",
+    "race": "狂野",
+    "profession": "刺客",
+    "price": "3",
+    "numbering": "107",
+    "avatar": "https://game.gtimg.cn/images/lol/tft/cham-icons/107.png"
+  },
+  {
+    "name": "痛苦之拥",
+    "race": "恶魔",
+    "profession": "刺客",
+    "price": "3",
+    "numbering": "28",
+    "avatar": "https://game.gtimg.cn/images/lol/tft/cham-icons/28.png"
+  },
+  {
+    "name": "不祥之刃",
+    "race": "帝国",
+    "profession": "刺客",
+    "price": "3",
+    "numbering": "55",
+    "avatar": "https://game.gtimg.cn/images/lol/tft/cham-icons/55.png"
+  },
+  {
+    "name": "离群之刺",
+    "race": "忍者",
+    "profession": "刺客",
+    "price": "4",
+    "numbering": "84",
+    "avatar": "https://game.gtimg.cn/images/lol/tft/cham-icons/84.png"
+  },
+  {
+    "name": "卡蜜尔",
+    "race": "海克斯",
+    "profession": "剑士",
+    "price": "1",
+    "numbering": "164",
+    "avatar": "https://game.gtimg.cn/images/lol/tft/cham-icons/164.png"
+  },
+  {
+    "name": "无双剑姬",
+    "race": "贵族",
+    "profession": "剑士",
+    "price": "1",
+    "numbering": "114",
+    "avatar": "https://game.gtimg.cn/images/lol/tft/cham-icons/114.png"
+  },
+  {
+    "name": "暮光之眼",
+    "race": "忍者",
+    "profession": "剑士",
+    "price": "2",
+    "numbering": "98",
+    "avatar": "https://game.gtimg.cn/images/lol/tft/cham-icons/98.png"
+  },
+  {
+    "name": "海洋之灾",
+    "race": "海盗",
+    "profession": "剑士-枪手",
+    "price": "3",
+    "numbering": "41",
+    "avatar": "https://game.gtimg.cn/images/lol/tft/cham-icons/41.png"
+  },
+  {
+    "name": "暗裔剑魔",
+    "race": "恶魔",
+    "profession": "剑士",
+    "price": "3",
+    "numbering": "266",
+    "avatar": "https://game.gtimg.cn/images/lol/tft/cham-icons/266.png"
+  },
+  {
+    "name": "荣耀行刑官",
+    "race": "帝国",
+    "profession": "剑士",
+    "price": "4",
+    "numbering": "119",
+    "avatar": "https://game.gtimg.cn/images/lol/tft/cham-icons/119.png"
+  },
+  {
+    "name": "疾风剑豪",
+    "race": "浪人",
+    "profession": "剑士",
+    "price": "5",
+    "numbering": "157",
+    "avatar": "https://game.gtimg.cn/images/lol/tft/cham-icons/157.png"
+  },
+  {
+    "name": "祖安怒兽",
+    "race": "狂野",
+    "profession": "斗士",
+    "price": "1",
+    "numbering": "19",
+    "avatar": "https://game.gtimg.cn/images/lol/tft/cham-icons/19.png"
+  },
+  {
+    "name": "虚空遁地兽",
+    "race": "虚空",
+    "profession": "斗士",
+    "price": "2",
+    "numbering": "421",
+    "avatar": "https://game.gtimg.cn/images/lol/tft/cham-icons/421.png"
+  },
+  {
+    "name": "蒸汽机器人",
+    "race": "机器人",
+    "profession": "斗士",
+    "price": "2",
+    "numbering": "53",
+    "avatar": "https://game.gtimg.cn/images/lol/tft/cham-icons/53.png"
+  },
+  {
+    "name": "蔚",
+    "race": "海克斯",
+    "profession": "斗士",
+    "price": "3",
+    "numbering": "254",
+    "avatar": "https://game.gtimg.cn/images/lol/tft/cham-icons/254.png"
+  },
+  {
+    "name": "雷霆咆哮",
+    "race": "极地",
+    "profession": "斗士",
+    "price": "3",
+    "numbering": "106",
+    "avatar": "https://game.gtimg.cn/images/lol/tft/cham-icons/106.png"
+  },
+  {
+    "name": "虚空恐惧",
+    "race": "虚空",
+    "profession": "斗士",
+    "price": "4",
+    "numbering": "31",
+    "avatar": "https://game.gtimg.cn/images/lol/tft/cham-icons/31.png"
+  },
+  {
+    "name": "冰霜女巫",
+    "race": "极地",
+    "profession": "元素使",
+    "price": "2",
+    "numbering": "127",
+    "avatar": "https://game.gtimg.cn/images/lol/tft/cham-icons/127.png"
+  },
+  {
+    "name": "狂暴之心",
+    "race": "约德尔人-忍者",
+    "profession": "元素使",
+    "price": "3",
+    "numbering": "85",
+    "avatar": "https://game.gtimg.cn/images/lol/tft/cham-icons/85.png"
+  },
+  {
+    "name": "复仇焰魂",
+    "race": "恶魔",
+    "profession": "元素使",
+    "price": "4",
+    "numbering": "63",
+    "avatar": "https://game.gtimg.cn/images/lol/tft/cham-icons/63.png"
+  },
+  {
+    "name": "冰晶凤凰",
+    "race": "极地",
+    "profession": "元素使",
+    "price": "5",
+    "numbering": "34",
+    "avatar": "https://game.gtimg.cn/images/lol/tft/cham-icons/34.png"
+  },
+  {
+    "name": "弗雷尔卓德之心",
+    "race": "极地",
+    "profession": "护卫",
+    "price": "2",
+    "numbering": "201",
+    "avatar": "https://game.gtimg.cn/images/lol/tft/cham-icons/201.png"
+  },
+  {
+    "name": "曙光女神",
+    "race": "贵族",
+    "profession": "护卫",
+    "price": "4",
+    "numbering": "89",
+    "avatar": "https://game.gtimg.cn/images/lol/tft/cham-icons/89.png"
+  },
+  {
+    "name": "潘森",
+    "race": "龙",
+    "profession": "护卫",
+    "price": "5",
+    "numbering": "80",
+    "avatar": "https://game.gtimg.cn/images/lol/tft/cham-icons/80.png"
+  },
+  {
+    "name": "麦林炮手",
+    "race": "约德尔人",
+    "profession": "枪手",
+    "price": "1",
+    "numbering": "18",
+    "avatar": "https://game.gtimg.cn/images/lol/tft/cham-icons/18.png"
+  },
+  {
+    "name": "法外狂徒",
+    "race": "海盗",
+    "profession": "枪手",
+    "price": "1",
+    "numbering": "104",
+    "avatar": "https://game.gtimg.cn/images/lol/tft/cham-icons/104.png"
+  },
+  {
+    "name": "圣枪游侠",
+    "race": "贵族",
+    "profession": "枪手",
+    "price": "2",
+    "numbering": "236",
+    "avatar": "https://game.gtimg.cn/images/lol/tft/cham-icons/236.png"
+  },
+  {
+    "name": "金克丝",
+    "race": "海克斯",
+    "profession": "枪手",
+    "price": "4",
+    "numbering": "222",
+    "avatar": "https://game.gtimg.cn/images/lol/tft/cham-icons/222.png"
+  },
+  {
+    "name": "赏金猎人",
+    "race": "海盗",
+    "profession": "枪手",
+    "price": "5",
+    "numbering": "21",
+    "avatar": "https://game.gtimg.cn/images/lol/tft/cham-icons/21.png"
+  },
+  {
+    "name": "铁铠冥魂",
+    "race": "暗影",
+    "profession": "骑士",
+    "price": "1",
+    "numbering": "82",
+    "avatar": "https://game.gtimg.cn/images/lol/tft/cham-icons/82.png"
+  },
+  {
+    "name": "德玛西亚之力",
+    "race": "贵族",
+    "profession": "骑士",
+    "price": "1",
+    "numbering": "86",
+    "avatar": "https://game.gtimg.cn/images/lol/tft/cham-icons/86.png"
+  },
+  {
+    "name": "诺克萨斯之手",
+    "race": "帝国",
+    "profession": "骑士",
+    "price": "1",
+    "numbering": "122",
+    "avatar": "https://game.gtimg.cn/images/lol/tft/cham-icons/122.png"
+  },
+  {
+    "name": "圣锤之毅",
+    "race": "约德尔人",
+    "profession": "骑士",
+    "price": "3",
+    "numbering": "78",
+    "avatar": "https://game.gtimg.cn/images/lol/tft/cham-icons/78.png"
+  },
+  {
+    "name": "北地之怒",
+    "race": "极地",
+    "profession": "骑士",
+    "price": "4",
+    "numbering": "113",
+    "avatar": "https://game.gtimg.cn/images/lol/tft/cham-icons/113.png"
+  },
+  {
+    "name": "正义天使",
+    "race": "贵族",
+    "profession": "骑士",
+    "price": "5",
+    "numbering": "lO",
+    "avatar": "https://game.gtimg.cn/images/lol/tft/cham-icons/lO.png"
+  },
+  {
+    "name": "暗影猎手",
+    "race": "贵族",
+    "profession": "游侠",
+    "price": "1",
+    "numbering": "67",
+    "avatar": "https://game.gtimg.cn/images/lol/tft/cham-icons/67.png"
+  },
+  {
+    "name": "惩戒之箭",
+    "race": "恶魔",
+    "profession": "游侠",
+    "price": "2",
+    "numbering": "llO",
+    "avatar": "https://game.gtimg.cn/images/lol/tft/cham-icons/llO.png"
+  },
+  {
+    "name": "寒冰射手",
+    "race": "极地",
+    "profession": "游侠",
+    "price": "3",
+    "numbering": "22",
+    "avatar": "https://game.gtimg.cn/images/lol/tft/cham-icons/22.png"
+  },
+  {
+    "name": "永猎双子",
+    "race": "暗影",
+    "profession": "游侠",
+    "price": "4",
+    "numbering": "203",
+    "avatar": "https://game.gtimg.cn/images/lol/tft/cham-icons/203.png"
+  },
+  {
+    "name": "狂野女猎手",
+    "race": "狂野",
+    "profession": "换形师",
+    "price": "1",
+    "numbering": "76",
+    "avatar": "https://game.gtimg.cn/images/lol/tft/cham-icons/76.png"
+  },
+  {
+    "name": "蜘蛛女皇",
+    "race": "恶魔",
+    "profession": "换形师",
+    "price": "1",
+    "numbering": "60",
+    "avatar": "https://game.gtimg.cn/images/lol/tft/cham-icons/60.png"
+  },
+  {
+    "name": "杰斯",
+    "race": "海克斯",
+    "profession": "换形师",
+    "price": "2",
+    "numbering": "126",
+    "avatar": "https://game.gtimg.cn/images/lol/tft/cham-icons/126.png"
+  },
+  {
+    "name": "龙血武姬",
+    "race": "龙",
+    "profession": "换形师",
+    "price": "3",
+    "numbering": "102",
+    "avatar": "https://game.gtimg.cn/images/lol/tft/cham-icons/102.png"
+  },
+  {
+    "name": "迷失之牙",
+    "race": "狂野-约德尔人",
+    "profession": "换形师",
+    "price": "4",
+    "numbering": "150",
+    "avatar": "https://game.gtimg.cn/images/lol/tft/cham-icons/150.png"
+  },
+  {
+    "name": "诺克萨斯统领",
+    "race": "恶魔-帝国",
+    "profession": "换形师",
+    "price": "5",
+    "numbering": "50",
+    "avatar": "https://game.gtimg.cn/images/lol/tft/cham-icons/50.png"
+  }
+]
