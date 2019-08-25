@@ -1,93 +1,77 @@
 <template>
-  <div class="index">
-    <van-field
-      class="break-all"
-      v-model="message"
-      type="textarea"
-      placeholder="你想说些什么吗？"
-      rows="1"
-      autosize
-    />
-    <div class="images">
-      <img v-for="(item, index) in imagesData" :key="index" :src="item" />
-    </div>
-    <div class="tools">
-      <div class="photo">
-        <van-icon name="photo-o" />
-        <input @change="xmTanUploadImg" ref="fileInput" class="photo-input" type="file" multiple="multiple" accept="image/*">
+  <div>
+    <div class="equipment">
+      <div class="base">
+        <div class="base-item" v-for="(item, index) in base" :key="index">
+          <img :src="item.imagesUrl" @click="equipmentClick(item)"/>
+        </div>
       </div>
-    </div>
-    <div class="buttons">
-      <van-button type="default" size="small">保存</van-button>
+      <div class="base">
+        <div class="base-item" v-for="item in 8" :key="item">
+          <img :src="selectBase.imagesUrl" />
+        </div>
+      </div>
+      <div class="synthesis">
+        <transition-group name="van-slide-right">
+          <div class="synthesis-item" v-for="(item, index) in baseToSynthesisAll" :key="index">
+            <img :src="item.imagesUrl"/>
+          </div>
+        </transition-group>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-import { Button, Field, Icon } from 'vant'
-import http from 'axios'
+import { getBase, getSynthesis } from '@/tools/equipment/equipment'
+import { Button } from 'vant'
 export default {
-  name: 'home',
+  name: 'index',
   components: {
-    [Button.name]: Button,
-    [Field.name]: Field,
-    [Icon.name]: Icon
+    [Button.name]: Button
   },
   data () {
     return {
-      message: '',
-      imagesData: []
+      base: getBase(),
+      synthesis: getSynthesis(),
+      baseToSynthesisAll: [],
+      selectBase: {}
     }
   },
+  computed: {},
   methods: {
-    xmTanUploadImg (event) {
-      // Reference to the DOM input element
-      var input = event.target
-      // Ensure that you have a file before attempting to read it
-      if (input.files && input.files[0]) {
-          // create a new FileReader to read this image and convert to base64 format
-          var reader = new FileReader()
-          // Define a callback function to run, when FileReader finishes its job
-          reader.onload = (e) => {
-              // Note: arrow function used here, so that "this.imageData" refers to the imageData of Vue component
-              // Read image as base64 and set to imageData
-              this.imagesData.push(e.target.result)
-              // this.$local.setItem('images', this.imagesData)
-          }
-          // Start the reader job - read file as a data url (base64 format)
-          reader.readAsDataURL(input.files[0])
-      }
+    equipmentClick (targer) {
+      this.selectBase = targer
+      this.baseToSynthesisAll = targer.synthesisAll()
+      
     }
   },
-  created () {
-    // this.$local.getItem('images').then(
-    //   res => {
-    //     if (res) {
-    //       this.imagesData = res
-    //     }
-    //   }
-    // )
-  }
+  created () {},
+  mounted () {},
+  activated () {}
 }
 </script>
 
-<style lang="stylus" scoped>
-.tools
-  text-align right
-  padding 10px 30px
-  .photo
-    font-size 30px
-    position relative
-    overflow hidden
-    display inline-block
-    .photo-input
-      position absolute 
-      top 0
-      right 0
-      bottom 0
-      left 0
-      opacity: 0
-.buttons
-  padding 0 30px
-  text-align right 
+<style scoped lang="stylus">
+.equipment
+  display flex
+  justify-content space-between
+  background-color #684e35
+  .base
+  .synthesis
+    display flex
+    justify-content center
+    flex-flow column nowrap
+    height 100vh
+    .base-item
+    .synthesis-item
+      width calc(100vh / 8)
+      height calc(100vh / 8)
+      padding 8px
+      font-size 0
+      img
+        width 100%
+        height 100%
+        border-radius 50%
+        overflow hidden
 </style>
