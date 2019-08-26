@@ -44,8 +44,6 @@ class Synthesis extends Equipment {
   }
 }
 
-
-
 // 根据名字查找一个装备
 function findEquipment (numbering) {
   const result = ALL.find(item => {

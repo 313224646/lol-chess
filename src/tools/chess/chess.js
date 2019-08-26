@@ -1,5 +1,6 @@
 const CHESS = require('./chess.json')
-let PROFESSION = {
+
+let PROFESSION = { // 职业
   法师: [],
   刺客: [],
   剑士: [],
@@ -11,7 +12,7 @@ let PROFESSION = {
   游侠: [],
   换形师: []
 }
-let RACE = {
+let RACE = { // 种族
   恶魔: [],
   龙: [],
   浪人: [],
@@ -26,6 +27,30 @@ let RACE = {
   虚空: [],
   狂野: [],
   约德尔人: []
+}
+const ELM = { // 羁绊
+  恶魔: [6, 4, 2],
+  极地: [6, 4, 2],
+  贵族: [6, 4, 2],
+  约德尔人: [6, 4, 2],
+  狂野: [4, 2],
+  忍者: [4, 1],
+  海盗: [3],
+  帝国: [4, 2],
+  虚空: [3],
+  龙: [2],
+  暗影: [2],
+  浪人: [1],
+  机器人: [1],
+  法师: [6, 3],
+  刺客: [6, 3],
+  骑士: [6, 4, 2],
+  剑士: [9, 6, 3],
+  枪手: [6, 4, 2],
+  斗士: [6, 4, 2],
+  换形师: [6, 3],
+  游侠: [4, 2],
+  元素使: [3]
 }
 
 // 划分职业和种族
@@ -66,16 +91,10 @@ class Chess {
     this.numbering = chess.numbering
     this.avatar = chess.avatar
   }
-
-  getProfessionChess () { // 获取同职业棋子
-  }
-
-  getRaceChess () { // 获取其他同种族棋子
-  }
 }
 
 // 获取某职业的棋子或所有职业的棋子
-function getProfession (profession) {
+function getProfessionChess (profession) {
   let professionAll = []
   if (profession) {
     if (PROFESSION[profession]) {
@@ -100,7 +119,7 @@ function getProfession (profession) {
 }
 
 // 获取某种族的棋子或所有种族的棋子
-function getRace (race) {
+function getRaceChess (race) {
   let raceAll = []
   if (race) {
     if (RACE[race]) {
@@ -124,7 +143,72 @@ function getRace (race) {
   }
 }
 
-export {
-  getProfession,
-  getRace
+// 获取所有职业
+function getProfession () {
+  let profession = [] // 职业数组
+  for (const key in PROFESSION) {
+    if (PROFESSION.hasOwnProperty(key)) {
+      profession.push(key)
+    }
+  }
+  return profession
 }
+
+// 获取所有种族
+function getRace () {
+  let race = [] // 种族数组
+  for (const key in RACE) {
+    if (RACE.hasOwnProperty(key)) {
+      race.push(key)
+    }
+  }
+  return race
+}
+
+// 解析棋子组合获取羁绊
+function getEntanglement (list) {
+  let targer = {}
+
+  list.forEach(chess => {
+    chess.profession.split('-').forEach(profession => {
+      if (targer.hasOwnProperty(profession)) {
+        targer[profession] += 1
+      } else {
+        targer[profession] = 1
+      }
+    })
+
+    chess.race.split('-').forEach(race => {
+      if (targer.hasOwnProperty(race)) {
+        targer[race] += 1
+      } else {
+        targer[race] = 1
+      }
+    })
+  })
+  return targer
+}
+
+// 触发的羁绊
+function triggerEntanglement(list) {
+  let targer = {}
+  for (const key in list) {
+    if (list.hasOwnProperty(key)) {
+      if (
+        ELM[key].find(value => {
+          return value < list[key]
+        })
+      ) {
+        targer[key]
+      }
+    }
+  }
+}
+
+// export {
+//   getProfessionChess,
+//   getRaceChess,
+//   getProfession,
+//   getRace,
+//   getEntanglement
+// }
